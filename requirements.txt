@@ -5,4 +5,4 @@ requests==2.24.0
 pickle4
 gunicorn
 scikit-learn==0.23.0
-xgboos==1.7.2
+xgboos==1.5.2
