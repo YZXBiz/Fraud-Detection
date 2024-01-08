@@ -1,0 +1,14 @@
+{
+    "$schema": "https://railway.app/railway.schema.json",
+    "build": {
+        "builder": "heroku/buildpacks:20",
+        "buildCommand": "pip install -r requirements.txt"
+    },
+    "deploy": {
+        "startCommand": "gunicorn -w 4 -k uvicorn.workers.UvicornWorker app:app",
+        "numReplicas": 1,
+        "sleepApplication": false,
+        "restartPolicyType": "ALWAYS",
+        "restartPolicyMaxRetries": 10
+    }
+}
